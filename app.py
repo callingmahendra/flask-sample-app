@@ -20,6 +20,16 @@ def project_details():
         "description": "This is a sample Flask application."
     }
     return f"Hello World! Here are the project details: {details}"
+    
+@app.route("/details_v2")
+def project_details():
+    """Endpoint to display project details."""
+    details = {
+        "project": "Flask Sample App v2",
+        "version": "1.0",
+        "description": "This is a sample Flask application."
+    }
+    return f"Hello World! Here are the project details: {details}"
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
